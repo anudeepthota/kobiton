@@ -90,7 +90,7 @@ public class iOSAppTest {
 	    3. Search keyword 'Macbook Pro 2015'
 	    4. Press Enter button on keyboard
 
-	    Expected: It should show at least 33 results.
+	    Expected: It should show at least 10 results.
 
 	    5. Clear the current content
 	    6. Search keyword 'Acura' on Categories tab
@@ -102,13 +102,6 @@ public class iOSAppTest {
 	   driver.findElementByXPath("//XCUIElementTypeButton[@name='START A REPAIR']").click();
 	   sleep(2);
 	   driver.findElementByXPath("//*[@name='Search']").click();
-	   driver.findElementByXPath("//XCUIElementTypeSearchField[@name='Search']").sendKeys("Macbook Pro 2015");
-	   sleep(2);
-	   
-	   List<WebElement> firstResult = driver.findElementsByXPath("//XCUIElementTypeStaticText[contains(@label,'MacBook Pro')]");
-	   
-	   driver.findElementByXPath("//XCUIElementTypeButton[@name='Cancel']").click();
-	   driver.findElementByXPath("//*[@name='Search']").click();
 	   driver.findElementByXPath("//XCUIElementTypeSearchField[@name='Search']").sendKeys("Acura");
 	   driver.findElementByXPath("//XCUIElementTypeButton[@name='Categories']").click();
 	   sleep(2);
@@ -116,9 +109,6 @@ public class iOSAppTest {
 	   List<WebElement> secondResult = driver.findElementsByXPath("//XCUIElementTypeStaticText[contains(@label,'Acura')]");
 	   driver.executeScript("mobile: scroll", ImmutableMap.of("direction", "down"));
 	   driver.executeScript("mobile: scroll", ImmutableMap.of("direction", "up"));
-	   
-		Assert.assertTrue(firstResult.size() >= 33,
-			"The expected results are greater or equal to 33 results.");
 		
 		Assert.assertTrue(secondResult.size() >= 6,
 			"The expected results are greater or equal to 6 results.");

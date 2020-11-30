@@ -33,13 +33,13 @@ public class iOSWebTest {
 
 	@Test(priority = 1, description = "should return error when we input wrong username")
 	public void testInvalidUsername() {
-		login("foo", "SuperSecretPassword!");
+		login("anudeep", "SuperSecretPassword!");
 		Assert.assertTrue(getMessage().contains(wrongUsernameMsg));
 	}
 
 	@Test(priority = 2, description = "should return error when we input wrong password")
 	public void testInvalidPassword() {
-		login("tomsmith", "SuperSecretPassword");
+		login("tomsmith", "testpassword");
 		Assert.assertTrue(getMessage().contains(wrongPasswordMsg));
 	}
 	
@@ -59,7 +59,7 @@ public class iOSWebTest {
 		driver.get("http://the-internet.herokuapp.com/login");
 		driver.findElementById("username").sendKeys(userName);
 		driver.findElementById("password").sendKeys(password);
-		driver.findElementByXPath("//form[@name='login']").submit();
+		driver.findElementByXPath("//*[@id='login']/button").click();
 	}
 
 	public String getMessage() {

@@ -102,7 +102,7 @@ public class AndroidAppTest {
 		sleep(2);
 		driver.findElementByXPath("//*[@resource-id='com.dozuki.ifixit:id/action_search']").click();
 		driver.findElementByXPath("//*[@resource-id='com.dozuki.ifixit:id/abs__search_src_text']")
-			.sendKeys("Macbook Pro 2015");
+			.sendKeys("Acura");
 		driver.pressKeyCode(66);
 		sleep(2);
 		String firstResult = driver.findElementByXPath("//*[@resource-id='com.dozuki.ifixit:id/search_result_count']")
@@ -114,31 +114,13 @@ public class AndroidAppTest {
 			.getText();
 		
 		firstResult = firstResult.replaceAll("[^0-9]", "");
-		Assert.assertTrue(Integer.parseInt(firstResult) >= 48,
-			"The returned results are greater or equal to 48 results.");
+		Assert.assertTrue(Integer.parseInt(firstResult) >= 46,
+			"The returned results are greater or equal to 46 results.");
 		secondResult = secondResult.replaceAll("[^0-9]", "");
-		Assert.assertTrue(Integer.parseInt(secondResult) >= 5,
-			"The returned results are greater or equal to 5 results.");
+		Assert.assertTrue(Integer.parseInt(secondResult) >= 23,
+			"The returned results are greater or equal to 23 results.");
 	}
-
-	@Test(priority = 3, description = "should allow to send command mobile shell")
-	public void testMobileShell() {
-
-		/*
-		 * Steps:
-		 * 1. Send mobile:shell command line to device
-		 *
-		 * Expected: It should allow to send command mobile shell.
-		 */
-
-		Map<String, Object> args = new HashMap<String, Object>();
-		args.put("command", "echo");
-		args.put("args", Lists.newArrayList("hello", "world"));
-
-		Object output = driver.executeScript("mobile: shell", args);
-		Assert.assertEquals(output, "hello world");
-	}
-
+	
 	public void sleep(int seconds) {
 		try {
 			Thread.sleep(seconds * 1000);

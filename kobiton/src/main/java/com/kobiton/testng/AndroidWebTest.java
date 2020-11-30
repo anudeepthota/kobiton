@@ -33,7 +33,7 @@ public class AndroidWebTest {
 
 	@Test(priority = 1, description = "should return error when we input wrong username")
 	public void testInvalidUsername() {
-		login("test", "SuperSecretPassword!");
+		login("anudeep", "SuperSecretPassword!");
 		Assert.assertTrue(getMessage().contains(wrongUsernameMsg));
 	}
 
@@ -45,7 +45,7 @@ public class AndroidWebTest {
 	
 	@Test(priority = 3, description = "should return error when we input wrong username and password")
 	public void testInvalidUserNameAndPassword() {
-		login("test", "testpassword");
+		login("anudeep", "testpassword");
 		Assert.assertTrue(getMessage().contains(wrongUsernameMsg));
 	}
 

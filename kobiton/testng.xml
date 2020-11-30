@@ -6,20 +6,19 @@
       <class name="com.kobiton.testng.AndroidWebTest"/>
     </classes>
     </test>
-  <!-- </test>
   <test name="Test Android App">
     <classes>
-      <class name="kobiton.com.testng.AndroidAppTest"/>
+      <class name="com.kobiton.testng.AndroidAppTest"/>
     </classes>
   </test>
   <test name="Test iOS Web">
     <classes>
-      <class name="kobiton.com.testng.iOSWebTest"/>
+      <class name="com.kobiton.testng.iOSWebTest"/>
     </classes>
   </test>
   <test name="Test iOS App">
     <classes>
-      <class name="kobiton.com.testng.iOSAppTest"/>
+      <class name="com.kobiton.testng.iOSAppTest"/>
     </classes>
-  </test> -->
+  </test>
 </suite>

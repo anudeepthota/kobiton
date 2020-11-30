@@ -50,7 +50,7 @@ public class Configs {
         capabilities.setCapability("groupId", 297);
         capabilities.setCapability("app", "https://s3-ap-southeast-1.amazonaws.com/kobiton-devvn/apps-test/demo/com.dozuki.ifixit.apk");
         capabilities.setCapability("deviceGroup", "KOBITON");
-        capabilities.setCapability("deviceName", "Galaxy A50");
+        capabilities.setCapability("deviceName", "Galaxy S9+");
         capabilities.setCapability("platformVersion", "9");
         capabilities.setCapability("platformName", "Android");
         return capabilities;
@@ -65,8 +65,8 @@ public class Configs {
         capabilities.setCapability("browserName", "safari");
         capabilities.setCapability("groupId", 297);
         capabilities.setCapability("deviceGroup", "KOBITON");
-        capabilities.setCapability("deviceName", "iPhone X");
-        capabilities.setCapability("platformVersion", "13.5.1");
+        capabilities.setCapability("deviceName", "iPhone XS Max");
+        capabilities.setCapability("platformVersion", "14.1");
         capabilities.setCapability("platformName", "iOS");
         return capabilities;
     }
@@ -78,10 +78,10 @@ public class Configs {
         capabilities.setCapability("deviceOrientation", "portrait");
         capabilities.setCapability("captureScreenshots", true);
         capabilities.setCapability("groupId", 297);
-        capabilities.setCapability("app", "kobiton-store:41003");
+        capabilities.setCapability("app", "https://s3-ap-southeast-1.amazonaws.com/kobiton-devvn/apps-test/demo/iFixit.ipa");
         capabilities.setCapability("deviceGroup", "KOBITON");
-        capabilities.setCapability("deviceName", "iPhone X");
-        capabilities.setCapability("platformVersion", "13.5.1");
+        capabilities.setCapability("deviceName", "iPhone 11 Pro Max");
+        capabilities.setCapability("platformVersion", "13.6.1");
         capabilities.setCapability("platformName", "iOS");
         return capabilities;
     }
